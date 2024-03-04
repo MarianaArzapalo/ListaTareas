@@ -13,7 +13,7 @@ const Filtros = ({total, activeFilter, showAllTodos, showActiveTodos, showComple
           </FilterButtonContainer>
   
           <button onClick={() => handleClearComplete()} className="text-gray-400 hover:text-green-400 cursor-pointer transition-all duration-300 ease-in-out">
-            Limpiar
+            Eliminar
           </button>
         </FiltersContainer>
     

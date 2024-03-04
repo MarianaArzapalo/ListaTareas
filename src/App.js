@@ -64,7 +64,16 @@ function App() {
     const updatedList = todos.filter(todo => !todo.completed);
     setTodos(updatedList);
   };
+  const handleEdit = (id, newTitle) => {
+    const updatedList = todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, title: newTitle };
+      }
+      return todo;
+    });
 
+    setTodos(updatedList);
+  };
   const showAllTodos = () => {
     setActiveFilter('all');
   };
@@ -104,6 +113,7 @@ function App() {
           showActiveTodos={showActiveTodos}
           showCompletedTodos={showCompletedTodos}
           handleClearComplete={handleClearComplete} 
+           handleEdit={handleEdit}
         />
       </div>
     </div>
